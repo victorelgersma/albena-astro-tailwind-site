@@ -3,9 +3,9 @@ export const defaultLang = "en" as const;
 export const ui = {
   en: {
     // Site Metadata
-    "siteMetadata.title": "Astro Starter Blog",
-    "siteMetadata.headerTitle": "Astro Starter Blog",
-    "siteMetadata.description": "A blog created with Astro and Tailwind.css",
+    "siteMetadata.title": "Albena Azmanova",
+    "siteMetadata.headerTitle": "Albena Azmanova",
+    "siteMetadata.description": "Albena Azmanova's Portfolio Site",
     "siteMetadata.language": "en-US",
 
     // Pages
@@ -41,9 +41,8 @@ export const ui = {
 
     // Navigation
     "nav.home": "Home",
-    "nav.blog": "Blog",
-    "nav.projects": "Projects",
-    "nav.tags": "Tags",
+    "nav.research": "Research",
+    "nav.events": "Events",
     "nav.about": "About",
 
     // Layouts

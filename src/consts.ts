@@ -6,7 +6,7 @@
 export const SITE_METADATA = {
   theme: "system", // Options: system, light, dark
   siteUrl: "https://tasb.yon.fun/",
-  siteRepo: "https://github.com/wanoo21/tailwind-astro-starting-blog",
+  siteRepo: "https://github.com/victorelgersma/albena-astro-tailwind-site",
   robots: "index, follow", // Options: index, noindex, follow, nofollow
 
   // These are not supported yet
@@ -99,8 +99,9 @@ export const ITEMS_PER_PAGE = 5;
  */
 export const NAVIGATION = [
   { href: "/", title: "nav.home" },
-  { href: "/research", title: "nav.blog" },
-  { href: "/events", title: "nav.tags" },
+  { href: "/", title: "nav.home" },
+  { href: "/research", title: "nav.research" },
+  { href: "/events", title: "nav.events" },
   { href: "/about", title: "nav.about" },
 ] as const;
 
