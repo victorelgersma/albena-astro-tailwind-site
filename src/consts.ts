@@ -90,7 +90,6 @@ export const SITE_METADATA = {
  */
 export const ITEMS_PER_PAGE = 5;
 
-
 /**
  * Navigation items.
  If title is not found in the translation file, it will be used as is.
@@ -100,9 +99,8 @@ export const ITEMS_PER_PAGE = 5;
  */
 export const NAVIGATION = [
   { href: "/", title: "nav.home" },
-  { href: "/blog", title: "nav.blog" },
-  { href: "/tags", title: "nav.tags" },
-  { href: "/projects", title: "nav.projects" },
+  { href: "/research", title: "nav.blog" },
+  { href: "/events", title: "nav.tags" },
   { href: "/about", title: "nav.about" },
 ] as const;
 
@@ -116,5 +114,5 @@ export const POST_METADATA = {
   showAuthors: true, // Show authors in blog post, TODO: Add support for hiding authors
   showRelatedPosts: true, // Show related posts in blog post, TODO: Add support for hiding related posts
   showTableOfContents: true, // Show table of contents in blog post
-  showShareButtons: 'both', // Show share buttons in blog post, options: top, bottom, both, none
+  showShareButtons: "both", // Show share buttons in blog post, options: top, bottom, both, none
 };
