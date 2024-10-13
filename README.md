@@ -1,3 +1,11 @@
+# Albena Azmanova Portfolio Site
+
+## To do
+
+- [ ] add albena image to home page
+
+
+
 ![img.png](img.png)
 
 # Tailwind Astro Starter Project
