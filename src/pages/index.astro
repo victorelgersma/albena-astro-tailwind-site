@@ -21,13 +21,17 @@ const posts = await getCollection("blog", excludeDrafts).then(sortBlogPosts);
 <h1 class="text-5xl my-7"> Welcome </h1>
 <p> I am a writer, scholar and political commentator interested in social justice and political judgment, the rise of new ideologies, and democracy's troubles with capitalism. I draw on history, philosophy, and sociology as I seek to produce politically salient and critical analyses of modern societies. </p>
 <div class="my-4 flex space-x-10 pr-10">
-  <div class="flex-col items-center">
+  <div class="flex flex-col items-center">
   <blockquote class="italic border-black text-gray-600 border-l-4 border-gray-400 pl-4"> Capitalism is not on its deathbed, utopia is not in our future, and revolution is not in the cards. And yet, the time is ripe for radical progressive change.</blockquote>
   <div class="flex flex-col mt-5 justify-center items-center">
-  <h3 class="text-2xl">My Latest Book</h3>
-      <p>"This is the big-think book of our time," <strong>James Galbraith</strong>, 
-      <a href="https://www.project-syndicate.org/onpoint/an-interview-with-james-k-galbraith-2020-11?barrier=accesspaylog"> interview </a> </p>
+  <div class="flex">
   <img alt="Book" class ="mx-auto my-4 w-5/12 object-contain" src="src/assets/book.jpg" />
+   <div class="m-5 flex flex-col justify-center items-center">
+  <h3 class="text-2xl my-5">My Latest Book</h3>
+      <p>"This is the big-think book of our time," <strong>James Galbraith</strong>, read the
+      <a class="text-green-600" href="https://www.project-syndicate.org/onpoint/an-interview-with-james-k-galbraith-2020-11?barrier=accesspaylog"> full interview </a> </p>
+  </div>
+  </div>
   </div>
   </div>
   <img alt="Albena" class="w-9/12 h-auto object-contain" src="src/assets/main.jpg" />
