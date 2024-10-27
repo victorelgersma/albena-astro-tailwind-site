@@ -2,15 +2,8 @@
 
 ## To do
 
-- [ ] make it say "Albena Azmanova" in the top left hand corner
 - [ ] add page "/books/capitalism-on-edge"
 - [ ] figure out how to add dropdown menu
-
-## Done
-- [x] make it have the same menu items
-- [x] add capitalism on Edge book
-- [x] add book - capitalism on Edge
-- [x] add albena image to home page
 
 ![img.png](img.png)
 

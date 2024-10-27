@@ -1,0 +1,35 @@
+---
+import books from '../data/books.json';
+import RootLayout from "@/layouts/RootLayout.astro";
+import  BookCard  from 'src/components/BookCard.astro'
+
+import { useTranslations } from "@/i18n";
+const t = useTranslations();
+---
+
+<RootLayout
+  title={t("siteMetadata.title")}
+  description={t("siteMetadata.description")}
+>
+
+<h1 class='text-3xl font-bold text-black dark:text-white'>Books</h1>
+<div class="book-list">
+  {books.map((book) => (
+  <BookCard book={book}/>
+  ))}
+</div>
+
+<style>
+  .book-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+  }
+  .book-card {
+    border: 1px solid #ccc;
+    padding: 16px;
+    text-align: center;
+  }
+</style>
+
+</RootLayout>

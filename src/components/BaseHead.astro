@@ -3,7 +3,6 @@ import "@/styles/global.css";
 import { SITE_METADATA } from "@/consts";
 import { ViewTransitions } from "astro:transitions";
 import "@fontsource/onest";
-import { SEO } from "astro-seo";
 import { getEntry, type CollectionEntry } from "astro:content";
 import Favicon from "@/assets/favicon.svg";
 import { getImage } from "astro:assets";
@@ -66,77 +65,6 @@ const isProduction = import.meta.env.PROD;
 ---
 
 <head>
-  <SEO
-    title={title}
-    {titleTemplate}
-    titleDefault={SITE_METADATA.title}
-    description={description}
-    nofollow={robots.includes("nofollow")}
-    noindex={robots.includes("noindex")}
-    url={Astro.url}
-    charset="utf-8"
-    extend={{
-      meta: [
-        {
-          name: "theme-color",
-          content: "#fff",
-          media: "(prefers-color-scheme: light)",
-        },
-        {
-          name: "theme-color",
-          content: "#000",
-          media: "(prefers-color-scheme: dark)",
-        },
-        { name: "viewport", content: "width=device-width,initial-scale=1" },
-      ],
-      link: [
-        { rel: "icon", type: `image/svg`, href: favicon.src },
-        { rel: "apple-touch-icon", sizes: "76x76", href: appleTouchIcon.src },
-        { rel: "icon", type: "image/svg", sizes: "32x32", href: favicon32.src },
-        { rel: "icon", type: "image/svg", sizes: "16x16", href: favicon16.src },
-        { rel: "mask-icon", href: favicon16.src, color: "black" },
-        { rel: "alternate", type: "application/rss+xml", href: "/rss.xml" },
-      ],
-    }}
-    twitter={{
-      ...((twitterCreator && {
-        card: "summary_large_image",
-        // site: creator.data.twitter,
-        creator: twitterCreator.replace("https://twitter.com/", "@"),
-        title,
-        description,
-        image: openGraphImage.src,
-      }) ||
-        {}),
-    }}
-    openGraph={{
-      basic: {
-        type: "website",
-        url: Astro.url,
-        title,
-        image: openGraphImage.src,
-      },
-      image: {
-        url: openGraphImage.src,
-        type: `image/${openGraphImage.options.format}`,
-        width: openGraphImage.options.width,
-        height: openGraphImage.options.height,
-        alt: title,
-      },
-      optional: {
-        locale: SITE_METADATA.language,
-        description,
-      },
-      ...(article && {
-        article: {
-          publishedTime: article.publishedTime.toISOString(),
-          modifiedTime: article.modifiedTime?.toISOString(),
-          authors: article.authors,
-          tags: article.tags,
-        },
-      }),
-    }}
-  />
   {isProduction && <Analytics />}
   <ViewTransitions />
 </head>

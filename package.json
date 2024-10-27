@@ -1,5 +1,5 @@
 {
-  "name": "tailwind-astro-starting-blog",
+  "name": "albena azmanova portfolio v2",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -21,7 +21,6 @@
     "astro": "^4.3.5",
     "astro-meta-tags": "^0.2.1",
     "astro-robots-txt": "^1.0.0",
-    "astro-seo": "^0.8.0",
     "prettier": "^3.3.3",
     "solid-js": "^1.8.14",
     "tailwindcss": "^3.3.5",
