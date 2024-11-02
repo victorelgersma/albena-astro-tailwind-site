@@ -5,7 +5,6 @@
 - [ ] add page "/books/capitalism-on-edge"
 - [ ] figure out how to add dropdown menu
 
-![img.png](img.png)
 
 # Tailwind Astro Starter Project
 
