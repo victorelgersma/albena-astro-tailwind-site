@@ -12,6 +12,7 @@ const t = useTranslations();
   description={t("siteMetadata.description")}
 >
 
+<!-- How do I make this a 3 column layout -->
 <h1 class='text-3xl font-bold text-black dark:text-white'>Books</h1>
 <div class="book-list">
   {books.map((book) => (
@@ -22,7 +23,7 @@ const t = useTranslations();
 <style>
   .book-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(3,  1fr);
     gap: 16px;
   }
 </style>
