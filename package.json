@@ -23,7 +23,6 @@
     "astro": "^4.3.5",
     "astro-meta-tags": "^0.2.1",
     "astro-robots-txt": "^1.0.0",
-    "prettier": "^3.3.3",
     "solid-js": "^1.8.14",
     "tailwindcss": "^3.3.5",
     "typescript": "^5.3.3"
@@ -33,6 +32,7 @@
     "@commitlint/config-conventional": "^19.5.0",
     "@tailwindcss/forms": "^0.5.7",
     "@tailwindcss/typography": "^0.5.10",
-    "husky": "^9.1.6"
+    "husky": "^9.1.6",
+    "prettier": "^3.3.3"
   }
 }

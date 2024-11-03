@@ -5,7 +5,6 @@
 - [ ] add page "/books/capitalism-on-edge"
 - [ ] figure out how to add dropdown menu
 
-
 # Tailwind Astro Starter Project
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/wanoo21/tailwind-astro-starting-blog?style=social)](https://GitHub.com/wanoo21/tailwind-astro-starting-blog/stargazers/)
