@@ -25,3 +25,7 @@ input:-webkit-autofill:focus {
     background-color 600000s 0s,
     color 600000s 0s;
 }
+
+.button-link {
+  @apply inline-block px-4 py-2 bg-green-200 text-green-700 dark:bg-gray-800 dark:text-white hover:text-white rounded hover:bg-green-700;
+}
