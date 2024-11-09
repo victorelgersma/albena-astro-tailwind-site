@@ -51,7 +51,7 @@ if (article?.cover) {
   });
 } else {
   const importedOgImage = await import(`../assets/og-image.png`).then(
-    (m) => m.default
+    (m) => m.default,
   );
   openGraphImage = await getImage({
     src: importedOgImage,
@@ -65,6 +65,5 @@ const isProduction = import.meta.env.PROD;
 ---
 
 <head>
-<meta charset="UTF-8">
-
+  <meta charset="UTF-8" />
 </head>

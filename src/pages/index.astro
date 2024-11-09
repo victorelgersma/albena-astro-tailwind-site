@@ -17,108 +17,139 @@ const posts = await getCollection("blog", excludeDrafts).then(sortBlogPosts);
   title={t("siteMetadata.title")}
   description={t("siteMetadata.description")}
 >
-<h1 class="text-5xl my-7"> Welcome </h1>
-<p> I am a writer, scholar and political commentator interested in social justice and political judgment, the rise of new ideologies, and democracy's troubles with capitalism. I draw on history, philosophy, and sociology as I seek to produce politically salient and critical analyses of modern societies. </p>
-<div class="my-4 flex space-x-10 pr-10">
-  <div class="flex flex-col items-center">
-  <blockquote class="italic border-black text-gray-600 border-l-4 border-gray-400 pl-4"> Capitalism is not on its deathbed, utopia is not in our future, and revolution is not in the cards. And yet, the time is ripe for radical progressive change.</blockquote>
-  <div class="flex flex-col mt-5 justify-center items-center">
-  <div class="flex">
-  <img alt="Book" class ="mx-auto my-4 w-5/12 object-contain" src="src/assets/book.jpg" />
-   <div class="m-5 flex flex-col justify-center items-center">
-  <h3 class="text-2xl my-5">My Latest Book</h3>
-  <p>"This is the big-think book of our time," <strong>- James Galbraith</strong>
-      (<a class="text-blue-800 dark:text-blue-500" href="https://www.project-syndicate.org/onpoint/an-interview-with-james-k-galbraith-2020-11?barrier=accesspaylog"> full interview </a>)
-      <div class="my-5">
-<a href="/books/capitalism-on-edge" class="button-link">Read more</a>
-<a href="/books/capitalism-on-edge#awards" class="button-link">Awards</a>
-      </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  <img alt="Albena" class="w-9/12 h-auto object-contain" src="src/assets/main.jpg" />
-
-</div>
-    <blockquote>
-    </blockquote>
-  <div class="divide-y divide-gray-200 dark:divide-gray-700">
-    <div class="space-y-2 pb-8 pt-6 md:space-y-5">
-      <h1
-        class="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14"
+  <h1 class="text-5xl my-7">Welcome</h1>
+  <p>
+    I am a writer, scholar and political commentator interested in social
+    justice and political judgment, the rise of new ideologies, and democracy's
+    troubles with capitalism. I draw on history, philosophy, and sociology as I
+    seek to produce politically salient and critical analyses of modern
+    societies.
+  </p>
+  <div class="my-4 flex space-x-10 pr-10">
+    <div class="flex flex-col items-center">
+      <blockquote
+        class="italic border-black text-gray-600 border-l-4 border-gray-400 pl-4"
       >
-        {t("pages.home.latestPosts")}
-      </h1>
-      <p class="text-lg leading-7 text-gray-500 dark:text-gray-400">
-        {t("siteMetadata.description")}
-      </p>
+        Capitalism is not on its deathbed, utopia is not in our future, and
+        revolution is not in the cards. And yet, the time is ripe for radical
+        progressive change.
+      </blockquote>
+      <div class="flex flex-col mt-5 justify-center items-center">
+        <div class="flex">
+          <img
+            alt="Book"
+            class="mx-auto my-4 w-5/12 object-contain"
+            src="src/assets/book.jpg"
+          />
+          <div class="m-5 flex flex-col justify-center items-center">
+            <h3 class="text-2xl my-5">My Latest Book</h3>
+            <p>
+              "This is the big-think book of our time," <strong
+                >- James Galbraith</strong
+              >
+              (<a
+                class="text-blue-800 dark:text-blue-500"
+                href="https://www.project-syndicate.org/onpoint/an-interview-with-james-k-galbraith-2020-11?barrier=accesspaylog"
+              >
+                full interview
+              </a>)
+              <div class="my-5">
+                <a href="/books/capitalism-on-edge" class="button-link"
+                  >Read more</a
+                >
+                <a href="/books/capitalism-on-edge#awards" class="button-link"
+                  >Awards</a
+                >
+              </div>
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        alt="Albena"
+        class="w-9/12 h-auto object-contain"
+        src="src/assets/main.jpg"
+      />
     </div>
-    <ul class="divide-y divide-gray-200 dark:divide-gray-700">
-      {!posts.length && t("pages.home.noPosts")}
-      {
-        posts.slice(0, ITEMS_PER_PAGE).map((post) => {
-          const { title, summary, tags } = post.data;
-          return (
-            <li class="py-12">
-              <article>
-                <div class="space-y-2 xl:grid xl:grid-cols-4 space-x-4 xl:space-y-0 xl:items-stretch">
-                  <ListPostCover {post} class="space-y-5 xl:col-span-1" />
-                  <div class="space-y-5 xl:col-span-3">
-                    <div class="space-y-6">
-                      <div>
-                        <h2 class="text-2xl font-bold leading-8 tracking-tight">
-                          <Link
-                            href={`/blog/${post.slug}`}
-                            class="text-gray-900 dark:text-gray-100"
-                          >
-                            {title}
-                          </Link>
-                        </h2>
-                        <div class="flex flex-wrap">
-                          {tags.map(({ slug }) => (
-                            <Tag slug={slug} />
-                          ))}
+    <blockquote></blockquote>
+    <div class="divide-y divide-gray-200 dark:divide-gray-700">
+      <div class="space-y-2 pb-8 pt-6 md:space-y-5">
+        <h1
+          class="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14"
+        >
+          {t("pages.home.latestPosts")}
+        </h1>
+        <p class="text-lg leading-7 text-gray-500 dark:text-gray-400">
+          {t("siteMetadata.description")}
+        </p>
+      </div>
+      <ul class="divide-y divide-gray-200 dark:divide-gray-700">
+        {!posts.length && t("pages.home.noPosts")}
+        {
+          posts.slice(0, ITEMS_PER_PAGE).map((post) => {
+            const { title, summary, tags } = post.data;
+            return (
+              <li class="py-12">
+                <article>
+                  <div class="space-y-2 xl:grid xl:grid-cols-4 space-x-4 xl:space-y-0 xl:items-stretch">
+                    <ListPostCover {post} class="space-y-5 xl:col-span-1" />
+                    <div class="space-y-5 xl:col-span-3">
+                      <div class="space-y-6">
+                        <div>
+                          <h2 class="text-2xl font-bold leading-8 tracking-tight">
+                            <Link
+                              href={`/blog/${post.slug}`}
+                              class="text-gray-900 dark:text-gray-100"
+                            >
+                              {title}
+                            </Link>
+                          </h2>
+                          <div class="flex flex-wrap">
+                            {tags.map(({ slug }) => (
+                              <Tag slug={slug} />
+                            ))}
+                          </div>
+                        </div>
+                        <div class="prose max-w-none text-gray-500 dark:text-gray-400">
+                          {summary}
                         </div>
                       </div>
-                      <div class="prose max-w-none text-gray-500 dark:text-gray-400">
-                        {summary}
+                      <div class="text-base font-medium leading-6">
+                        <Link
+                          href={`/blog/${post.slug}`}
+                          class="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+                          aria-label={t("pages.home.readMoreAbout", { title })}
+                        >
+                          {t("pages.home.readMore")} &rarr;
+                        </Link>
                       </div>
                     </div>
-                    <div class="text-base font-medium leading-6">
-                      <Link
-                        href={`/blog/${post.slug}`}
-                        class="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-                        aria-label={t('pages.home.readMoreAbout', {title})}
-                      >
-                        {t('pages.home.readMore')} &rarr;
-                      </Link>
-                    </div>
                   </div>
-                </div>
-              </article>
-            </li>
-          );
-        })
-      }
-    </ul>
+                </article>
+              </li>
+            );
+          })
+        }
+      </ul>
+    </div>
+    {
+      posts.length > ITEMS_PER_PAGE && (
+        <div class="flex justify-end text-base font-medium leading-6">
+          <Link
+            href="/blog"
+            class="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+            aria-label={t("pages.home.viewAllPosts")}
+          >
+            {t("pages.home.viewAllPosts")} &rarr;
+          </Link>
+        </div>
+      )
+    }
+    <!--TODO: Add newsletter form-->
+    <!--{siteMetadata.newsletter?.provider && (-->
+    <!--        <div class="flex items-center justify-center pt-4">-->
+    <!--            <NewsletterForm />-->
+    <!--        </div>-->
+    <!--)}-->
   </div>
-  {
-    posts.length > ITEMS_PER_PAGE && (
-      <div class="flex justify-end text-base font-medium leading-6">
-        <Link
-          href="/blog"
-          class="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-          aria-label={t('pages.home.viewAllPosts')}
-        >
-        {t('pages.home.viewAllPosts')} &rarr;
-        </Link>
-      </div>
-    )
-  }
-  <!--TODO: Add newsletter form-->
-  <!--{siteMetadata.newsletter?.provider && (-->
-  <!--        <div class="flex items-center justify-center pt-4">-->
-  <!--            <NewsletterForm />-->
-  <!--        </div>-->
-  <!--)}-->
 </RootLayout>

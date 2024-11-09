@@ -1,25 +1,35 @@
 ---
-const { book  }= Astro.props;
+const { book } = Astro.props;
 ---
+
 <!-- Card -->
-<div class="block rounded-lg bg-white shadow-lg dark:bg-neutral-700 text-center">
+<div
+  class="block rounded-lg bg-white shadow-lg dark:bg-neutral-700 text-center"
+>
   <!-- Card image -->
   <a href="#!">
-    <img class="rounded-t-lg" src="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg" alt="" />
+    <img
+      class="rounded-t-lg"
+      src="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
+      alt=""
+    />
   </a>
 
- <!-- Card body with fixed height -->
+  <!-- Card body with fixed height -->
   <div class="p-6 h-24 overflow-hidden">
     <!-- Title -->
-    <h5 class="mb-2 text-xl font-bold tracking-wide text-neutral-800 dark:text-neutral-50">
+    <h5
+      class="mb-2 text-xl font-bold tracking-wide text-neutral-800 dark:text-neutral-50"
+    >
       {book.title}
     </h5>
   </div>
 
   <!-- Card footer with fixed height -->
-  <div class="flex items-center justify-end border-t-2 border-neutral-100 h-12 px-6 dark:border-neutral-500">
+  <div
+    class="flex items-center justify-end border-t-2 border-neutral-100 h-12 px-6 dark:border-neutral-500"
+  >
     {book.year}
   </div>
-
 </div>
 <!-- Card -->

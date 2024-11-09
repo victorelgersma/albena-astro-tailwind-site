@@ -1,7 +1,7 @@
 ---
-import books from '../data/books.json';
+import books from "../data/books.json";
 import RootLayout from "@/layouts/RootLayout.astro";
-import  BookCard  from 'src/components/BookCard.astro'
+import BookCard from "src/components/BookCard.astro";
 
 import { useTranslations } from "@/i18n";
 const t = useTranslations();
@@ -11,14 +11,9 @@ const t = useTranslations();
   title={t("siteMetadata.title")}
   description={t("siteMetadata.description")}
 >
-
-<!-- How do I make this a 3 column layout -->
-<h1 class='text-3xl font-bold text-black dark:text-white'>Books</h1>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-  {books.map((book) => (
-  <BookCard book={book}/>
-  ))}
-</div>
-
-
+  <!-- How do I make this a 3 column layout -->
+  <h1 class="text-3xl font-bold text-black dark:text-white">Books</h1>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    {books.map((book) => <BookCard book={book} />)}
+  </div>
 </RootLayout>
