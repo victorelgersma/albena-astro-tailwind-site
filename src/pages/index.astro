@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 
 import { ITEMS_PER_PAGE } from "@/consts";
+import {Image } from 'astro:assets';
 import RootLayout from "@/layouts/RootLayout.astro";
 import Link from "@/components/Link.astro";
 import ListPostCover from "@/components/ListPostCover.astro";
@@ -9,6 +10,7 @@ import Tag from "@/components/Tag.astro";
 import { excludeDrafts, sortBlogPosts } from "@/functions";
 import { useTranslations } from "@/i18n";
 
+import testImg from "../assets/main.jpg"
 const t = useTranslations();
 const posts = await getCollection("blog", excludeDrafts).then(sortBlogPosts);
 ---
@@ -36,10 +38,10 @@ const posts = await getCollection("blog", excludeDrafts).then(sortBlogPosts);
       </blockquote>
       <div class="flex flex-col mt-5 justify-center items-center">
         <div class="flex">
-          <img
+          <Image
             alt="Book"
             class="mx-auto my-4 w-5/12 object-contain"
-            src="src/assets/book.jpg"
+	    src={testImg}
           />
           <div class="m-5 flex flex-col justify-center items-center">
             <h3 class="text-2xl my-5">My Latest Book</h3>
