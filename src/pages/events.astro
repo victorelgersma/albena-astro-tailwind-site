@@ -1,5 +1,7 @@
 ---
 import RootLayout from "@/layouts/RootLayout.astro";
+import { Image } from "astro:assets";
+import lionImage from '../assets/events/16-07-24.jpg'
 ---
 
 <RootLayout>
@@ -7,7 +9,7 @@ import RootLayout from "@/layouts/RootLayout.astro";
   <div
     class="max-w-sm rounded dark:bg-gray-900 overflow-hidden shadow-lg bg-white"
   >
-  <img class="w-full" src="src/assets/events/16-07-24.jpg" alt="Card Image" />
+  <Image class="w-full" src={lionImage} alt="Card Image" />
     <div class="px-6 py-4">
       <div class="font-bold text-xl mb-2 dark:text-gray-100">
         Emancipation without Utopia? (lectio magistralis)
