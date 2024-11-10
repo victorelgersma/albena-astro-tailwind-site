@@ -4,20 +4,28 @@ import RootLayout from "@/layouts/RootLayout.astro";
 
 <RootLayout>
   <h1>Events</h1>
-  <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
-    <img class="w-full" src="events/16-07-24.jpg" alt="Card Image" />
-    <div class="px-6 py-4 dark:bg-gray-900">
-      <div class="font-bold text-xl mb-2 dark:text-white">
+  <div
+    class="max-w-sm rounded dark:bg-gray-900 overflow-hidden shadow-lg bg-white"
+  >
+  <img class="w-full" src="src/assets/events/16-07-24.jpg" alt="Card Image" />
+    <div class="px-6 py-4">
+      <div class="font-bold text-xl mb-2 dark:text-gray-100">
         Emancipation without Utopia? (lectio magistralis)
       </div>
-      <p class="text-gray-700 text-base"></p>
+      <p class="text-gray-700 dark:text-gray-200 text-base">
+        The landscape of our political imagination is void of a grand utopia
+        able to energise the discontent and the hopes of the multitude. Why is
+        this the case? And what ways are still available to us for radical
+        transformation without the help of Utopia?
+      </p>
     </div>
-    <div class="px-6 pt-4 pb-2">
-      <button
-        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-      >
-        Learn More
-      </button>
+    <div class="px-6 pt-4 pb-2 text-gray-500 dark:text-gray-400">
+      <div>
+        <strong>Date:</strong> Sun, 16 Jun 2024
+      </div>
+      <div>
+        <strong>Location:</strong> Rome, Italy
+      </div>
     </div>
   </div>
 </RootLayout>
