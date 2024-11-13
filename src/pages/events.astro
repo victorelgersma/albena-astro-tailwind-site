@@ -10,6 +10,7 @@ const cards = [
       "Interview by the Bulgarian National Radio on the violence involving Maccabi Tel Aviv fans and the ensuing media coverage",
     date: "Wed, 13 Nov 2024",
     location: "Sofia, Bulgaria",
+    organisation: "BNR (Bulgarian National Radio)",
     url: "https://bnr.bg/horizont/post/102074423/prof-albena-azmanova-razdelenieto-e-mejdu-eliti-i-naselenie",
     lang: "bg",
   },
@@ -54,6 +55,7 @@ const cards = [
               <p class="text-gray-700 dark:text-gray-200 text-base">
                 {card.description}
               </p>
+	      <p class="py-4"><strong> Organized by <strong>{card.organisation}<p>
             </div>
             <div class="px-6 pt-4 pb-2 text-gray-500 dark:text-gray-400">
               {card.date}
