@@ -2,7 +2,7 @@
 import { getCollection } from "astro:content";
 
 import { ITEMS_PER_PAGE } from "@/consts";
-import {Image } from 'astro:assets';
+import { Image } from "astro:assets";
 import RootLayout from "@/layouts/RootLayout.astro";
 import Link from "@/components/Link.astro";
 import ListPostCover from "@/components/ListPostCover.astro";
@@ -10,7 +10,7 @@ import Tag from "@/components/Tag.astro";
 import { excludeDrafts, sortBlogPosts } from "@/functions";
 import { useTranslations } from "@/i18n";
 
-import imgCapitalismOnEdge from "../assets/book.jpg"
+import imgCapitalismOnEdge from "../assets/book.jpg";
 const t = useTranslations();
 const posts = await getCollection("blog", excludeDrafts).then(sortBlogPosts);
 ---
@@ -20,55 +20,54 @@ const posts = await getCollection("blog", excludeDrafts).then(sortBlogPosts);
   description={t("siteMetadata.description")}
 >
   <h1 class="text-5xl my-7">Welcome</h1>
-  <p class='mb-10'>
+  <p class="mb-10">
     I am a writer, scholar and political commentator interested in social
     justice and political judgment, the rise of new ideologies, and democracy's
     troubles with capitalism. I draw on history, philosophy, and sociology as I
     seek to produce politically salient and critical analyses of modern
     societies.
   </p>
-      <blockquote
-        class="italic border-black text-gray-600 border-l-4 border-gray-400 pl-4"
-      >
-        Capitalism is not on its deathbed, utopia is not in our future, and
-        revolution is not in the cards. And yet, the time is ripe for radical
-        progressive change.
-      </blockquote>
-      <div class="flex flex-col mt-5 justify-center items-center">
-        <div class="flex">
-          <Image
-            alt="Book"
-            class="mx-auto my-4 w-5/12 object-contain"
-	    src={imgCapitalismOnEdge}
-          />
-          <div class="m-5 flex flex-col justify-center items-center">
-            <h3 class="text-2xl my-5">My Latest Book</h3>
-            <p>
-              "This is the big-think book of our time," <strong
-                >- James Galbraith</strong
-              >
-              (<a
-                class="text-blue-800 dark:text-blue-500"
-                href="https://www.project-syndicate.org/onpoint/an-interview-with-james-k-galbraith-2020-11?barrier=accesspaylog"
-              >
-                full interview
-              </a>)
-              <div class="my-5">
-                <a href="/books/capitalism-on-edge" class="button-link"
-                  >Read more</a
-                >
-                <a href="/books/capitalism-on-edge#awards" class="button-link"
-                  >Awards</a
-                >
-              </div>
-            </p>
+  <blockquote
+    class="italic border-black text-gray-600 border-l-4 border-gray-400 pl-4"
+  >
+    Capitalism is not on its deathbed, utopia is not in our future, and
+    revolution is not in the cards. And yet, the time is ripe for radical
+    progressive change.
+  </blockquote>
+  <div class="flex flex-col mt-5 justify-center items-center">
+    <div class="flex">
+      <Image
+        alt="Book"
+        class="mx-auto my-4 w-5/12 object-contain"
+        src={imgCapitalismOnEdge}
+      />
+      <div class="m-5 flex flex-col justify-center items-center">
+        <h3 class="text-2xl my-5">My Latest Book</h3>
+        <p>
+          "This is the big-think book of our time," <strong
+            >- James Galbraith</strong
+          >
+          (<a
+            class="text-blue-800 dark:text-blue-500"
+            href="https://www.project-syndicate.org/onpoint/an-interview-with-james-k-galbraith-2020-11?barrier=accesspaylog"
+          >
+            full interview
+          </a>)
+          <div class="my-5">
+            <a href="/books/capitalism-on-edge" class="button-link">Read more</a
+            >
+            <a href="/books/capitalism-on-edge#awards" class="button-link"
+              >Awards</a
+            >
           </div>
+        </p>
+      </div>
       <img
         alt="Albena"
         class="w-9/12 h-auto object-contain"
         src="src/assets/main.jpg"
       />
-        </div>
-      </div>
-      <h2 class='text-5xl'>Latest</h2>
+    </div>
+  </div>
+  <h2 class="text-5xl">Latest</h2>
 </RootLayout>
