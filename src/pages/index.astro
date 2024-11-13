@@ -10,7 +10,7 @@ import Tag from "@/components/Tag.astro";
 import { excludeDrafts, sortBlogPosts } from "@/functions";
 import { useTranslations } from "@/i18n";
 
-import testImg from "../assets/main.jpg"
+import imgCapitalismOnEdge from "../assets/book.jpg"
 const t = useTranslations();
 const posts = await getCollection("blog", excludeDrafts).then(sortBlogPosts);
 ---
@@ -41,7 +41,7 @@ const posts = await getCollection("blog", excludeDrafts).then(sortBlogPosts);
           <Image
             alt="Book"
             class="mx-auto my-4 w-5/12 object-contain"
-	    src={testImg}
+	    src={imgCapitalismOnEdge}
           />
           <div class="m-5 flex flex-col justify-center items-center">
             <h3 class="text-2xl my-5">My Latest Book</h3>
@@ -65,13 +65,13 @@ const posts = await getCollection("blog", excludeDrafts).then(sortBlogPosts);
               </div>
             </p>
           </div>
-        </div>
-      </div>
       <img
         alt="Albena"
         class="w-9/12 h-auto object-contain"
         src="src/assets/main.jpg"
       />
+        </div>
+      </div>
     </div>
     <blockquote></blockquote>
     <div class="divide-y divide-gray-200 dark:divide-gray-700">
