@@ -14,13 +14,11 @@ import SectionContainer from "../components/SectionContainer.astro";
     class="bg-white text-black antialiased dark:bg-gray-950 dark:text-white"
   >
     <SectionContainer class='bg-red border-sky-500'>
-      <div class="flex h-screen flex-col justify-between font-sans">
         <Header />
         <main class="mb-auto">
           <slot />
         </main>
         <Footer />
-      </div>
     </SectionContainer>
   </body>
 </html>
