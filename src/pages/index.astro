@@ -20,15 +20,13 @@ const posts = await getCollection("blog", excludeDrafts).then(sortBlogPosts);
   description={t("siteMetadata.description")}
 >
   <h1 class="text-5xl my-7">Welcome</h1>
-  <p>
+  <p class='mb-10'>
     I am a writer, scholar and political commentator interested in social
     justice and political judgment, the rise of new ideologies, and democracy's
     troubles with capitalism. I draw on history, philosophy, and sociology as I
     seek to produce politically salient and critical analyses of modern
     societies.
   </p>
-  <div class="my-4 space-x-10 pr-10">
-    <div class="flex flex-col items-center">
       <blockquote
         class="italic border-black text-gray-600 border-l-4 border-gray-400 pl-4"
       >
@@ -72,19 +70,5 @@ const posts = await getCollection("blog", excludeDrafts).then(sortBlogPosts);
       />
         </div>
       </div>
-    </div>
-    <blockquote></blockquote>
-    <div class="divide-y divide-gray-200 dark:divide-gray-700">
-      <div class="space-y-2 pb-8 pt-6 md:space-y-5">
-        <h1
-          class="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14"
-        >
-          {t("pages.home.latestPosts")}
-        </h1>
-        <p class="text-lg leading-7 text-gray-500 dark:text-gray-400">
-          {t("siteMetadata.description")}
-        </p>
-      </div>
-    </div>
-  </div>
+      <h2 class='text-5xl'>Latest</h2>
 </RootLayout>

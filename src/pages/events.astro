@@ -2,32 +2,41 @@
 import RootLayout from "@/layouts/RootLayout.astro";
 import { Image } from "astro:assets";
 import lionImage from '../assets/events/16-07-24.jpg'
+
+const cards = [{
+  img: lionImage,
+  title: "Emancipation without Utopia? (lectio magistralis)",
+  description: "The landscape of our political imagination is void of a grand utopia able to energise the discontent and the hopes of the multitude. Why is this the case? And what ways are still available to us for radical transformation without the help of Utopia?",
+  date: "Sun, 16 Jun 2024",
+  location: "Rome, Italy",
+  url: 'https://iperfestival.it/'
+}]
 ---
 
 <RootLayout>
-  <h1>Events</h1>
-  <div
-    class="max-w-sm rounded dark:bg-gray-900 overflow-hidden shadow-lg bg-white"
-  >
-  <Image class="w-full" src={lionImage} alt="Card Image" />
-    <div class="px-6 py-4">
-      <div class="font-bold text-xl mb-2 dark:text-gray-100">
-        Emancipation without Utopia? (lectio magistralis)
+  <h1 class='text-4xl py-4'>Events</h1>
+  {cards.map((card) => (
+  <a href={card.url}>
+    <div class="max-w-sm rounded dark:bg-gray-900 overflow-hidden shadow-lg bg-white" key={card.title}>
+      <Image class="w-full" src={card.img} alt="Card Image" />
+      <div class="px-6 py-4">
+        <div class="font-bold text-xl mb-2 dark:text-gray-100">
+          {card.title}
+        </div>
+        <p class="text-gray-700 dark:text-gray-200 text-base">
+          {card.description}
+        </p>
       </div>
-      <p class="text-gray-700 dark:text-gray-200 text-base">
-        The landscape of our political imagination is void of a grand utopia
-        able to energise the discontent and the hopes of the multitude. Why is
-        this the case? And what ways are still available to us for radical
-        transformation without the help of Utopia?
-      </p>
-    </div>
-    <div class="px-6 pt-4 pb-2 text-gray-500 dark:text-gray-400">
-      <div>
-        <strong>Date:</strong> Sun, 16 Jun 2024
-      </div>
-      <div>
-        <strong>Location:</strong> Rome, Italy
+      <div class="px-6 pt-4 pb-2 text-gray-500 dark:text-gray-400">
+        <div>
+          <strong>Date:</strong> {card.date}
+        </div>
+        <div>
+          <strong>Location:</strong> {card.location}
+        </div>
       </div>
     </div>
-  </div>
+  </a>
+  ))}
 </RootLayout>
+
