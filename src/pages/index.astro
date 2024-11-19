@@ -11,8 +11,10 @@ import { excludeDrafts, sortBlogPosts } from "@/functions";
 import { useTranslations } from "@/i18n";
 
 import imgCapitalismOnEdge from "../assets/book.jpg";
+import profile from "../assets/main.jpg"
 const t = useTranslations();
 const posts = await getCollection("blog", excludeDrafts).then(sortBlogPosts);
+
 ---
 
 <RootLayout
@@ -62,10 +64,10 @@ const posts = await getCollection("blog", excludeDrafts).then(sortBlogPosts);
           </div>
         </p>
       </div>
-      <img
+      <Image
         alt="Albena"
         class="w-9/12 h-auto object-contain"
-        src="src/assets/main.jpg"
+	src={profile}
       />
     </div>
   </div>
