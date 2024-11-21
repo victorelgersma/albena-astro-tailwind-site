@@ -17,10 +17,7 @@ const posts = await getCollection("blog", excludeDrafts).then(sortBlogPosts);
 
 ---
 
-<RootLayout
-  title={t("siteMetadata.title")}
-  description={t("siteMetadata.description")}
->
+<RootLayout>
   <h1 class="text-5xl my-7">Welcome</h1>
   <p class="mb-10">
     I am a writer, scholar and political commentator interested in social
