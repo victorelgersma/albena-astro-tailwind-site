@@ -11,10 +11,9 @@ import { excludeDrafts, sortBlogPosts } from "@/functions";
 import { useTranslations } from "@/i18n";
 
 import imgCapitalismOnEdge from "../assets/book.jpg";
-import profile from "../assets/main.jpg"
+import profile from "../assets/main.jpg";
 const t = useTranslations();
 const posts = await getCollection("blog", excludeDrafts).then(sortBlogPosts);
-
 ---
 
 <RootLayout>
@@ -26,15 +25,15 @@ const posts = await getCollection("blog", excludeDrafts).then(sortBlogPosts);
     seek to produce politically salient and critical analyses of modern
     societies.
   </p>
-	  <div class="flex flex-wrap-reverse space-between">
-		  <div class='flex-1 min-w-[300px] p-4'>
-  <blockquote
-    class="italic border-black text-gray-600 border-l-4 border-gray-400 pl-4"
-  >
-    Capitalism is not on its deathbed, utopia is not in our future, and
-    revolution is not in the cards. And yet, the time is ripe for radical
-    progressive change.
-  </blockquote>
+  <div class="flex flex-wrap-reverse space-between">
+    <div class="flex-1 min-w-[300px] p-4">
+      <blockquote
+        class="italic border-black text-gray-600 border-l-4 border-gray-400 pl-4"
+      >
+        Capitalism is not on its deathbed, utopia is not in our future, and
+        revolution is not in the cards. And yet, the time is ripe for radical
+        progressive change.
+      </blockquote>
       <Image
         alt="Book"
         class="mx-auto my-4 w-5/12 object-contain"
@@ -42,7 +41,7 @@ const posts = await getCollection("blog", excludeDrafts).then(sortBlogPosts);
       />
       <div class="m-5 flex flex-col justify-center items-center">
         <h3 class="text-2xl my-5">My Latest Book</h3>
-	<p class=''>
+        <p class="">
           "This is the big-think book of our time," <strong
             >- James Galbraith</strong
           >
@@ -53,23 +52,21 @@ const posts = await getCollection("blog", excludeDrafts).then(sortBlogPosts);
             full interview
           </a>)
         </p>
-          <div class="my-5">
-            <a href="/books/capitalism-on-edge" class="button-link">Read more</a
-            >
-            <a href="/books/capitalism-on-edge#awards" class="button-link"
-              >Awards</a
-            >
-          </div>
+        <div class="my-5">
+          <a href="/books/capitalism-on-edge" class="button-link">Read more</a>
+          <a href="/books/capitalism-on-edge#awards" class="button-link"
+            >Awards</a
+          >
+        </div>
       </div>
     </div>
     <div class="flex-1 min-w-[300px] p-4 grid place-items-center">
       <Image
         alt="Albena"
         class="w-9/12 rounded-lg h-auto object-contain"
-	src={profile}
+        src={profile}
       />
     </div>
-    </div>
   </div>
-  <h2 class="text-5xl">Latest</h2>
 </RootLayout>
+<h2 class="text-5xl">Latest</h2>
