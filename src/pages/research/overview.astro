@@ -1,14 +1,31 @@
 ---
+import { getEntry } from "astro:content";
 import RootLayout from "@/layouts/RootLayout.astro";
-import * as markdown from './test.md'
----
 
-<!-- TO DO:
-make the 2013 etc links be links to the bottom of the page
--->
+// https://docs.astro.build/en/guides/markdown-content/
+// get an entry from /content/research/overview
+const overview = await getEntry("research", "overview");
+const { Content } = await overview.render();
+
+import items from '../../content/research/publications.md'
+
+const items = [{"year": '2019c', 'link': '#', 'text': '"Marx", in The Cambridge Habermas Lexicon edited by Amy Allen and Eduardo Mendieta (Cambridge University Press, Mar)' }]
+
+---
 
 <RootLayout>
   <div class="prose prose-a-green dark:prose-invert">
+    <Content />
 
-	  <h1> {markdown.frontmatter.title} </h1>
+    <h2> Books </h2>
+
+    <div class='m-4'>
+	    {items.map((item) => 
+	    <li id=`${item.year}`>{item.text}</li>
+		    )}
+
+		    <h2> Articles and Book Chapters </h2>
+    </div>
+
   </div>
+</RootLayout>
