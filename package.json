@@ -23,6 +23,7 @@
     "astro": "^4.16.10",
     "astro-meta-tags": "^0.2.1",
     "astro-robots-txt": "^1.0.0",
+    "marked": "^15.0.2",
     "remark-gfm": "^4.0.0",
     "solid-js": "^1.8.14",
     "tailwindcss": "^3.3.5",

@@ -7,25 +7,57 @@ import RootLayout from "@/layouts/RootLayout.astro";
 const overview = await getEntry("research", "overview");
 const { Content } = await overview.render();
 
-import items from '../../content/research/publications.md'
-
-const items = [{"year": '2019c', 'link': '#', 'text': '"Marx", in The Cambridge Habermas Lexicon edited by Amy Allen and Eduardo Mendieta (Cambridge University Press, Mar)' }]
-
+const listItems = [
+  { id: "1992", description: "Description", url: "#" },
+  { id: "2001", description: "Description", url: "#" },
+  { id: "2006", description: "Description", url: "#" },
+  { id: "2009a", description: "Description", url: "#" },
+  { id: "2009b", description: "Description", url: "#" },
+  { id: "2012a", description: "Description", url: "#" },
+  { id: "2011a", description: "Description", url: "#" },
+  { id: "2011c", description: "Description", url: "#" },
+  { id: "2013c", description: "Description", url: "#" },
+  { id: "2014", description: "Description", url: "#" },
+  { id: "2019e", description: "Description", url: "#" },
+  { id: "2019c", description: "Description", url: "#" },
+  { id: "2019b", description: "Description", url: "#" },
+  { id: "2012b", description: "Description", url: "#" },
+  { id: "2018b", description: "Description", url: "#" },
+  { id: "2016b", description: "Description", url: "#" },
+  { id: "2020a", description: "Description", url: "#" },
+];
 ---
 
 <RootLayout>
+  <!-- start markdown rendered with prose -->
   <div class="prose prose-a-green dark:prose-invert">
     <Content />
-
-    <h2> Books </h2>
-
-    <div class='m-4'>
-	    {items.map((item) => 
-	    <li id=`${item.year}`>{item.text}</li>
-		    )}
-
-		    <h2> Articles and Book Chapters </h2>
-    </div>
-
   </div>
+
+  <!--end prose -->
+  <!-- unfortunately markdown doesn't support linking to li tags with an id  
+but we don't want to the native footnotes this because we want to mimick the behavior in the old site) -->
+  <h2 class="text-4xl mt-4">Books</h2>
+  <ul>
+    {
+      listItems.map((item) => (
+        <li id={item.id}>
+          <a href={item.url}>{item.id}</a>
+          <p>{item.description}</p>
+        </li>
+      ))
+    }
+  </ul>
 </RootLayout>
+
+<style>
+  li {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  li a {
+    width: 4rem;
+  }
+</style>
