@@ -16,7 +16,6 @@ In contrast to analyses that attribute the rise of populism to a democratic defi
 
 The various trajectories of my research into the political economy and the ideological dynamics of contemporary capitalism converge into the comprehensive analysis I offer in my new book Capitalism on Edge ([2020a](#2020a)), which lays out a path for radical social change without reliance on crisis, revolution, or utopia. In this work, I construct a methodology for critical social analysis, which is then operationalised in an analysis of the transformation of capitalism over the past two centuries. This work elaborates a conception of radical social change as subversion of systemic dynamics, rather than overthrowing or resisting these dynamics.
 
+[^2001]: Bulgaria’s Prospects for EU Membership, _East European Constitutional Review_ 5/4 (Jan).
 
-
-[^2001]:  Bulgaria’s Prospects for EU Membership, _East European Constitutional Review_ 5/4 (Jan). 
-[^1]: 1992:  The Legitimacy of Communism?, Sociological Problems 4 (Jun).  
+[^1]: 1992: The Legitimacy of Communism?, Sociological Problems 4 (Jun).
