@@ -4,34 +4,34 @@ import { Image } from "astro:assets";
 import lionImage from "../assets/events/16-07-24.jpg";
 
 const cards = [
-{
-title: "Проф. Албена Азманова: Разделението е между елити и население",
-description:
-"Interview by the Bulgarian National Radio on the violence involving Maccabi Tel Aviv fans and the ensuing media coverage",
-date: "Wed, 13 Nov 2024",
-location: "Sofia, Bulgaria",
-organisation: "BNR (Bulgarian National Radio)",
-url: "https://bnr.bg/horizont/post/102074423/prof-albena-azmanova-razdelenieto-e-mejdu-eliti-i-naselenie",
-lang: "bg",
-},
-{
-img: lionImage,
-title: "Emancipation without Utopia? (lectio magistralis)",
-description:
-"The landscape of our political imagination is void of a grand utopia able to energise the discontent and the hopes of the multitude. Why is this the case? And what ways are still available to us for radical transformation without the help of Utopia?",
-date: "Sun, 16 Jun 2024",
-location: "Rome, Italy",
-url: "https://iperfestival.it/",
-},
-{
-img: lionImage,
-title: "",
-description:
-"2nd Leuven Critical Emancipations Conference: The Production of Difference",
-'date': "Sun, 16 Jun 2024",
-'location': "Rome, Italy",
-url: "https://iperfestival.it/",
-},
+  {
+    title: "Проф. Албена Азманова: Разделението е между елити и население",
+    description:
+      "Interview by the Bulgarian National Radio on the violence involving Maccabi Tel Aviv fans and the ensuing media coverage",
+    date: "Wed, 13 Nov 2024",
+    location: "Sofia, Bulgaria",
+    organisation: "BNR (Bulgarian National Radio)",
+    url: "https://bnr.bg/horizont/post/102074423/prof-albena-azmanova-razdelenieto-e-mejdu-eliti-i-naselenie",
+    lang: "bg",
+  },
+  {
+    img: lionImage,
+    title: "Emancipation without Utopia? (lectio magistralis)",
+    description:
+      "The landscape of our political imagination is void of a grand utopia able to energise the discontent and the hopes of the multitude. Why is this the case? And what ways are still available to us for radical transformation without the help of Utopia?",
+    date: "Sun, 16 Jun 2024",
+    location: "Rome, Italy",
+    url: "https://iperfestival.it/",
+  },
+  {
+    img: lionImage,
+    title: "",
+    description:
+      "2nd Leuven Critical Emancipations Conference: The Production of Difference",
+    date: "Sun, 16 Jun 2024",
+    location: "Rome, Italy",
+    url: "https://iperfestival.it/",
+  },
 ];
 ---
 
@@ -55,7 +55,10 @@ url: "https://iperfestival.it/",
               <p class="text-gray-700 dark:text-gray-200 text-base">
                 {card.description}
               </p>
-	      <p class="py-4"><strong> Organized by <strong>{card.organisation}<p>
+              <p class="py-4">
+                <strong> Organized by </strong>
+                {card.organisation}
+              </p>
             </div>
             <div class="px-6 pt-4 pb-2 text-gray-500 dark:text-gray-400">
               {card.date}
@@ -65,7 +68,7 @@ url: "https://iperfestival.it/",
             </div>
           </a>
         </div>
-	));
-	};
+      ))
+    }
   </div>
 </RootLayout>
