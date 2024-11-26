@@ -14,12 +14,7 @@ import profile from "../assets/main.jpg";
 const t = useTranslations();
 const posts = await getCollection("blog", excludeDrafts).then(sortBlogPosts);
 
-const shouldThrowError = process.env.TEST_SRR_ERROR === "true";
-
-if (shouldThrowError) {
-  throw new Error("boom")
-}
-
+console.log(import.meta.env.PUBLIC_ERROR)  // only in dev mode?
 
 ---
 
