@@ -8,12 +8,19 @@ import ListPostCover from "@/components/ListPostCover.astro";
 import Tag from "@/components/Tag.astro";
 import { excludeDrafts, sortBlogPosts } from "@/functions";
 import { useTranslations } from "@/i18n";
-throw new Error("boom");
 
 import imgCapitalismOnEdge from "../assets/book.jpg";
 import profile from "../assets/main.jpg";
 const t = useTranslations();
 const posts = await getCollection("blog", excludeDrafts).then(sortBlogPosts);
+
+const shouldThrowError = process.env.TEST_SRR_ERROR === "true";
+
+if (shouldThrowError) {
+  throw new Error("boom")
+}
+
+
 ---
 
 <RootLayout>
