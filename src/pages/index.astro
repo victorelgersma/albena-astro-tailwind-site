@@ -1,21 +1,9 @@
 ---
-import { getCollection } from "astro:content";
-import { ITEMS_PER_PAGE } from "@/consts";
 import { Image } from "astro:assets";
 import RootLayout from "@/layouts/RootLayout.astro";
-import Link from "@/components/Link.astro";
 import ListPostCover from "@/components/ListPostCover.astro";
-import Tag from "@/components/Tag.astro";
-import { excludeDrafts, sortBlogPosts } from "@/functions";
-import { useTranslations } from "@/i18n";
-
 import imgCapitalismOnEdge from "../assets/book.jpg";
 import profile from "../assets/main.jpg";
-const t = useTranslations();
-const posts = await getCollection("blog", excludeDrafts).then(sortBlogPosts);
-
-console.log(import.meta.env.PUBLIC_ERROR)  // only in dev mode?
-
 ---
 
 <RootLayout>
