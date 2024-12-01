@@ -5,9 +5,9 @@ import img from "../assets/albena-azmanova-3.jpg";
 ---
 
 <RootLayout>
-  <div>
-    <h1 class="text-4xl">About</h1>
-    <img src={img.src} alt="portrait" width="200" loading="lazy" align="top" />
+  <div class='prose dark:prose-invert'>
+    <h1>About</h1>
+    <img class='float-left m-5' src={img.src} alt="portrait" width="200" loading="lazy" align="top" />
     <p>
       I was born and grew up in Bulgaria, and took part in the dissident
       movement that brought down the dictatorship in 1989. I was educated in
@@ -46,15 +46,8 @@ import img from "../assets/albena-azmanova-3.jpg";
 </RootLayout>
 
 <style>
-  img {
-    float: left;
-    margin: 1rem;
-  }
   p {
     margin-top: 5px;
   }
 
-  a {
-    color: green;
-  }
 </style>
