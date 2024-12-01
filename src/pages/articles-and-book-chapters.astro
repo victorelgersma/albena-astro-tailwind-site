@@ -1,5 +1,18 @@
 ---
 import RootLayout from "@/layouts/RootLayout.astro";
+const items = [ { title: "The ends of radical critique? Crisis, capitalism, emancipation: a conversation",
+with: "Amy Allen, Paul Apostolidis and Lea Ypi"},
+{ title: "Democracy with foresight: the key to a socially sustainable transition in Europe (and beyond)"}]
+
 ---
 
-<RootLayout> Hello </RootLayout>
+<RootLayout> 
+
+
+  {items.map(i => (
+  <h2 class="text-4xl pt-4 mt-4"> {i.title}</h2>
+  <hr>)
+  )}
+
+
+</RootLayout>
