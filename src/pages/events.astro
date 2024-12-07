@@ -8,7 +8,7 @@ const cards = [
     title: "Проф. Албена Азманова: Разделението е между елити и население",
     description:
       "Interview by the Bulgarian National Radio on the violence involving Maccabi Tel Aviv fans and the ensuing media coverage",
-    date: "Wed, 13 Nov 2024",
+    datetime: "2024-11-13",
     location: "Sofia, Bulgaria",
     organisation: "BNR (Bulgarian National Radio)",
     url: "https://bnr.bg/horizont/post/102074423/prof-albena-azmanova-razdelenieto-e-mejdu-eliti-i-naselenie",
@@ -19,7 +19,7 @@ const cards = [
     title: "Emancipation without Utopia? (lectio magistralis)",
     description:
       "The landscape of our political imagination is void of a grand utopia able to energise the discontent and the hopes of the multitude. Why is this the case? And what ways are still available to us for radical transformation without the help of Utopia?",
-    date: "Sun, 16 Jun 2024",
+    datetime: "2024-07-16",
     location: "Rome, Italy",
     url: "https://iperfestival.it/",
   },
@@ -28,11 +28,24 @@ const cards = [
     title: "",
     description:
       "2nd Leuven Critical Emancipations Conference: The Production of Difference",
-    date: "Sun, 16 Jun 2024",
+    datetime: "2024-07-16",
     location: "Rome, Italy",
     url: "https://iperfestival.it/",
   },
 ];
+
+function formatted(foo) {
+  const date = new Date(foo);
+
+  const options = {
+    weekday: "short", // "Sun"
+    day: "2-digit", // "15"
+    month: "short", // "June"
+    year: "numeric", // "2025"
+  };
+
+  return date.toLocaleDateString("en-GB", options);
+}
 ---
 
 <RootLayout>
@@ -48,7 +61,7 @@ const cards = [
             {card.img && (
               <Image class="w-full" src={card.img} alt="Card Image" />
             )}
-            <div class="px-6 py-4">
+            <div class="px-6 border py-4">
               <div class="font-bold text-xl mb-2 dark:text-gray-100">
                 {card.title}
               </div>
@@ -59,12 +72,8 @@ const cards = [
                 <strong> Organized by </strong>
                 {card.organisation}
               </p>
-            </div>
-            <div class="px-6 pt-4 pb-2 text-gray-500 dark:text-gray-400">
-              {card.date}
-              <div>
-                <strong>Location:</strong> {card.location}
-              </div>
+              <time datetime={card.datetime}>{formatted(card.datetime)}</time>
+              <strong>Location:</strong> {card.location}
             </div>
           </a>
         </div>
